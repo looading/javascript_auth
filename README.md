@@ -5,3 +5,6 @@ gulp watch file ,browserSync reload browser
 ```bash
 gulp --c {num}  // num 第几章
 ```
+
+## chapter 章节
+1. 第一章 JavaScript概述
