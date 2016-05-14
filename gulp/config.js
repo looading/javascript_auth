@@ -5,3 +5,5 @@ const config = {
 		'main.js'
 	]
 }
+
+module.exports = config

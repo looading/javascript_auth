@@ -1,12 +1,15 @@
 const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 const config = require('./gulp/config')
+const process = require('process')
 const reload = browserSync.reload
+var chapter = gulp.env.c;
 
 gulp.task('create', () => {
+	
 	browserSync.init({
 		server : {
-			baseDir : './'
+			baseDir : `./${chapter}/`
 		},
 		port : 5555
 	})
@@ -14,7 +17,13 @@ gulp.task('create', () => {
 
 
 gulp.task('watch', () => {
-	gulp.watch(config.src).on('change', reload)
+	for(var i=0 ; i < config.src.length; i++ ) {
+		gulp.watch(`./${chapter}/${config.src[i]}`).on('change', reload)
+	}
+	
 })
+
+
+
 
 gulp.task('default', [ 'create', 'watch' ])
