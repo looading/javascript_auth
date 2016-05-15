@@ -1,3 +1,27 @@
 .text-center {
 	text-align: center;
 }
+.text-left {
+	text-align: left;
+}
+.danger {
+	color: red;
+}
+.info {
+	color: blue;
+}
+.warnning {
+	color: #FFEB3B;
+}
+.output {
+	font-weight: bold;
+}
+#payment {
+	text-decoration: underline;
+}
+#graph {
+	border: solid black 1px;
+}
+th, td {
+	vertical-align: top;
+}
