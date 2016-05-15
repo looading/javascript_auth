@@ -14,3 +14,31 @@ function fac2(a,b) {
 	return fac2(a-1, a*b)
 }
 ```
+
+### knowledges
+```bash
+canvas : 
+	getContext('2d')
+	fillStyle
+	fill()
+	lineTo(x,y)
+	moveTo(x,y)
+	closePath()
+	beginPath()
+	stroke() // 绘制曲线
+	fillText('string', x, y)
+	font
+	fillRect(x1, y1, x2, y2)
+	textAlign
+	textBaseLine
+	lineWidth
+
+localStorage: 
+	localStorage.sss = 'sss'
+
+js: 
+	parseFloat()
+	toFixed()
+	appendChild()
+	createTextNode()
+```
