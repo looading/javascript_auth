@@ -1,6 +1,6 @@
 ## describe
 ```bash
-1、 由Unicode字符集编写
+1、 由Unicode字符集编写(UTF-16)
 2、 区分大小写
 3、 可选的分号
 
