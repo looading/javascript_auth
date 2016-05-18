@@ -4,3 +4,62 @@
 .text-left {
 	text-align: left;
 }
+
+
+
+.box {
+	width: 400px;
+	height: 400px;
+	border: 1px solid #000;
+	display: flex;
+	// flex-direction: center;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.column {
+	display: flex;
+	flex-basis: 100%;
+	justify-content: space-between;
+}
+.item {
+	background-color: #000;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	justify-content: center;
+	text-align: center;
+	line-height: 40px;
+}
+
+
+.body {
+	display: flex;
+	flex-direction: column;
+	min-height: 300px;
+}
+header, .content, footer {
+	flex: 1;
+}
+
+.content {
+	display: flex;
+}
+
+main, nav, aside {
+	flex: 1;
+}
+
+nav, aside {
+	flex: 0 0 12em;
+}
+
+nav {
+	order: -1;
+}
+
+
+
