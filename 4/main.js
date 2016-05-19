@@ -1,13 +1,13 @@
 // 数组直接量
 run(function() {
 	console.log([1,2,,,,,,5]);
-})
+}, 0)
 
 // 运算顺序
 run(function() {
 	var a = 1;
 	console.log((a++)+a);
-})
+}, 0)
 run(function() {
 	var a = 1;
 	console.log((++a)+a);
@@ -31,13 +31,13 @@ run(function() {
 	// console.log(1 + obj);
 	var x = '2';
 	console.log(1 + +"1", 1 + 1, "1" + 1, 1 + 1 + 's', 's' + 1 + 1, 1 + null, ++x-1);
-})
+}, 0)
 
 // 位操作符
 run(function() {
 	console.log(1111 & 0000);
 	console.log(~~1,~1,~2,~3,~~'12',~'12',~~'12.22',~'12.22');
-})
+}, 0)
 
 // eval
 run(function() {
@@ -49,7 +49,7 @@ run(function() {
 		console.log(c);
 	}
 	a()
-})
+}, 0)
 
 // void
 run(function() {
@@ -59,4 +59,4 @@ run(function() {
 
 	console.log(a());
 	console.log(void a());
-})
+}, 0)

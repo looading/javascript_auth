@@ -25,9 +25,9 @@ run(function() {
 	}
 	var cc = createTail(1,2,3,4)
 	tail(cc)
-})
+}, 1)
 
 // debugger
 run(function() {
 	console.log('asda') debugger;
-})
+}, 0)
