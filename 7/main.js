@@ -63,4 +63,36 @@ run(function() {
 		return x*x;
 	})
 	console.log(a, b);
+}, 0)
+
+run(function() {
+	var a = [1,2,3,4,5,6,7];
+	console.log(a.every(function(x) {
+		return x-3;
+	}));
+	console.log(a.some(function(x) {
+		return x-3;
+	}));
+	console.log(a.reduce(function(x, y) {
+		return x + y;
+	}, 0));
+}, 0)
+
+// 获取元素出现的所有索引值
+run(function() {
+	function findAll(p, a) {
+		var res = [],
+			len = a.length,
+			pos = 0;
+
+		while(pos < len) {
+			pos = a.indexOf(p, pos);
+			if(pos === -1) break;
+			res.push(pos++)
+		}
+		return res;
+	}
+	var str = [1,2,3,1,1,1,1,2,3,4].join('');
+	var res = findAll(1, str);
+	console.log(res);
 }, 1)
