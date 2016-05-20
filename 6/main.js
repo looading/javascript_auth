@@ -143,11 +143,55 @@ run(function() {
 	console.log(random.int6, random.int16, random.octet, random.uint16);
 	console.log(Object.getOwnPropertyDescriptor(random , 'int6'));
 	// this.random = random
-}, 1)
+}, 0)
 
 run(function() {
 	var o = {
 		x: 1
 	}
 	console.log(Object.getOwnPropertyDescriptor(o, 'x'))
+}, 0)
+
+
+// 修改属性的特性
+run(function() {
+	var o = {};
+	Object.defineProperty(o, 'x', {
+		value: 1,
+		writable: true,
+		enumerable: true,
+		configurable: false
+	})
+	this.o = o;
+}, 0)
+
+//  获取对象的类属性
+run(function() {
+	function Person() {
+		this.sex = 'man';
+		this.type = '汉族';
+	}
+	function classof(o) {
+		if (o === null) return 'Null';
+		if(o === undefined) return 'Undefined';
+		return Object.prototype.toString.call(o).slice(8, -1);
+	}
+	var p = new Person();
+
+	this.p = p;
+	this.classof = classof;
+
+}, 0)
+
+// 序列化对象
+run(function() {
+	var o = {
+		x: '1',
+		y: {
+			z: 2
+		}
+	}
+	console.log(JSON.stringify(o));
+	console.log(JSON.parse(JSON.stringify(o)));
+	this.o = o;
 }, 1)
